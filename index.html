@@ -26,11 +26,11 @@
     </a-scene> -->
     <p id="feedback">Point camera at target</p>
 
-    <a-scene mindar-image="imageTargetSrc: ./assets/target.mind; autoStart: true;">
+    <a-scene mindar-image="imageTargetSrc: /RuneDetector/assets/target.mind; autoStart: true;">
         <a-entity camera></a-entity>
 
         <a-entity id="imageTarget" mindar-image-target="targetIndex: 0">
-            <a-entity gltf-model="./assets/male_1.glb" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity gltf-model="/RuneDetector/assets/male_1.glb" scale="0.5 0.5 0.5"></a-entity>
         </a-entity>
     </a-scene>
 </body>
