@@ -1,10 +1,10 @@
-const feedback = document.getElementById('feedback');
-const marker = document.getElementById('marker');
+const target = document.querySelector("#imageTarget");
+const feedback = document.querySelector("#feedback");
 
-marker.addEventListener('markerFound', () => {
-    feedback.textContent = 'Marker detected!';
+target.addEventListener("targetFound", () => {
+  feedback.innerText = "Target detected!";
 });
 
-marker.addEventListener('markerLost', () => {
-    feedback.textContent = 'Point camera at marker';
+target.addEventListener("targetLost", () => {
+  feedback.innerText = "Point camera at target";
 });
