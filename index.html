@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>MindAR Simple AR</title>
+    <script src="https://cdn.jsdelivr.net/gh/MindAR-js/aframe/dist/aframe-mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <p id="feedback">Point camera at image target</p>
+
+    <a-scene mindar-image="imageTargetSrc: /RuneDetector/assets/target.mind; autoStart: true;" 
+             embedded 
+             vr-mode-ui="enabled: false" 
+             color-space="sRGB">
+
+        <!-- AR Camera -->
+        <a-entity camera></a-entity>
+
+        <!-- MindAR Image Anchor -->
+        <a-entity mindar-image-target="targetIndex: 0">
+            <a-entity gltf-model="/RuneDetector/assets/male_1.glb" 
+                      scale="0.5 0.5 0.5" 
+                      position="0 0 0"
+                      rotation="0 0 0">
+            </a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
